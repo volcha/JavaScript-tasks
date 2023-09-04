@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container pt-5" id="app">
+            <div class="card center">
+                <!-- Интерполяция (главное условие, чтобы значение могла быть приведено к строке) -->
+                <h1>{{title}}: {{ counter + 5 }}</h1>
+                <div>
+                    <!-- v-on делает что-то типо listenera -->
+                    <button class="btn primary" v-on:click="counter++">
+                        +
+                    </button>
+                    <button class="btn danger" v-on:click="counter--">-</button>
+                </div>
+            </div>
+        </div>
+        <!-- Vue сам по себе это просто объект -->
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
